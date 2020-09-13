@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+
+    div.container
+        div.jumbotron
+            h1 Upload Level
+            a.btn.btn-default.btn-sm(href = '/') Home
+
+            if (message.length > 0)
+                div.alert.alert-danger #{message}
+
+            form(action = '/upload', method = 'post', enctype = "multipart/form-data")
+                div.form-group
+                    label Level
+                    input.form-control(type = 'file', name = 'level')
+                button.btn.btn-warning.btn-lg(type = 'submit') Upload

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+
+    div.container
+        div.jumbotron.text-center
+            h1
+                = 'Welcome ' + user.local.username
+            a.btn.btn-default(href = '/profile')
+                span.fa.fa-user
+                |  Profile
+            a.btn.btn-default(href = '/upload')
+                span.fa.fa-user
+                |  Upload Level
+            a.btn.btn-default(href = '/levels')
+                span.fa.fa-user
+                |  Levels
+            a.btn.btn-default(href = '/auth/logout') Logout
